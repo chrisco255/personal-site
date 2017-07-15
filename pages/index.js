@@ -1,12 +1,82 @@
-const something = 'Yolo';
+import Header from '../components/header';
+import Link from 'next/link';
+import Markdown from 'react-markdown';
+import input from '../markdown/test';
+
+const fonts = {
+  primary: 'Lora, Times, serif',
+  secondary: ''
+};
+
+const colors = {
+  primary: '#5DCEBA',
+  secondary: '#ED640B',
+  tertiary: '#E0B944',
+  complementary: '#5B3214',
+};
+
+const JumboHeader = () => (
+  <div>
+    <div className="jumbo">
+      <h1>Chris Cordle</h1>
+      <p>Yes indeed</p>
+      <p>Showcase | <Link href="/about">About</Link> | Blog</p>
+    </div>
+    <style jsx>{`
+      .jumbo {
+        background-color: ${colors.primary};
+        height: 256px;
+        width: 100%;
+      }
+      h1 {
+        margin: 0;
+        font-family: ${fonts.primary};
+      }
+    `}</style>
+  </div>
+);
+
+const Container = ({ children }) => (
+  <div className="outer">
+    <div className="inner">
+      { children }
+    </div>
+    <style jsx>{`
+      .outer {
+        display: flex;
+        justify-content: center;
+      }
+      .inner {
+        max-width: 600px;
+      }
+      @media (min-width: 600px) {
+        .inner {
+          width: 600px;
+        }
+      }
+    `}</style>
+  </div>
+);
 
 const Index = () => (
   <div>
-    <h2>Chris Cordle</h2>
-    <p>Hello Chris</p>
-    <p>It's like I'm blah in 1997 all over again!!</p>
-    <p>{ something }</p>
+    <Header />
+    <JumboHeader />
+    <Container>
+      <h1>Chris Cordle</h1>
+      <p>
+        What? Is this what font looks like? Lorem ipsum. I think when it's typed
+        out and covers more lines. It looks better. Don't you think? I like this
+        formatting it seems like a good fit for a blog.
+      </p>
+    </Container>
+    <Container>
+      <Markdown source={input} />
+    </Container>
+    <style jsx>{`
+
+    `}</style>
   </div>
-)
+);
 
 export default Index
