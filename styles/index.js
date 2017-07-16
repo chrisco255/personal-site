@@ -4,10 +4,9 @@ const fonts = {
 };
 
 const colors = {
-  primary: '#5DCEBA',
-  secondary: '#ED640B',
-  tertiary: '#E0B944',
-  complementary: '#5B3214'
+  primary: '#EB1D26',
+  secondary: '#1110EF',
+  tertiary: '#452202'
 };
 
 export { fonts, colors };

@@ -15,27 +15,6 @@ const colors = {
   complementary: '#5B3214',
 };
 
-const JumboHeader = () => (
-  <div>
-    <div className="jumbo">
-      <h1>Chris Cordle</h1>
-      <p>Yes indeed</p>
-      <p>Showcase | <Link href="/about">About</Link> | Blog</p>
-    </div>
-    <style jsx>{`
-      .jumbo {
-        background-color: ${colors.primary};
-        height: 256px;
-        width: 100%;
-      }
-      h1 {
-        margin: 0;
-        font-family: ${fonts.primary};
-      }
-    `}</style>
-  </div>
-);
-
 const Container = ({ children }) => (
   <div className="outer">
     <div className="inner">
@@ -47,6 +26,7 @@ const Container = ({ children }) => (
         justify-content: center;
       }
       .inner {
+        margin: 0 16px;
         max-width: 600px;
       }
       @media (min-width: 600px) {
@@ -61,7 +41,6 @@ const Container = ({ children }) => (
 const Index = () => (
   <div>
     <Header />
-    <JumboHeader />
     <Container>
       <h1>Chris Cordle</h1>
       <p>
