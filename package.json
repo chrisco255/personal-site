@@ -12,12 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "isomorphic-unfetch": "^2.0.0",
     "json-loader": "^0.5.4",
     "next": "^2.4.7",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-markdown": "^2.5.0",
-    "react-music": "^1.0.2",
-    "react-no-ssr": "^1.1.0"
+    "react-markdown": "^2.5.0"
   }
 }

@@ -5,7 +5,12 @@ import { fonts, colors } from '../styles';
 
 export default () => (
   <header>
-    <Head>
+    <Head profile="http://www.w3.org/2005/10/profile">
+      <title>ChrisCo</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="icon"
+            type="image/ico"
+            href="/static/favicon.ico" />
       <style>{`
         body {
           margin: 0;
@@ -40,6 +45,7 @@ export default () => (
           color: ${colors.secondary};
           text-decoration: none;
         }
+
         a:hover {
           text-decoration: underline;
         }
@@ -48,9 +54,9 @@ export default () => (
     <div className="nav-container">
       <div className="nav-header">
         <img className="logo" src="/static/images/mario.svg" />
-        <p>It's-a me, Chris Co!</p>
+        <p>It's-a me, ChrisCo!</p>
         <div className="nav-links-container">
-          <p className="nav-links">Showcase | <Link href="/about">About</Link> | Blog</p>
+          <p className="nav-links">Showcase | <Link href="/about"><a>About</a></Link> | Blog</p>
         </div>
       </div>
     </div>
